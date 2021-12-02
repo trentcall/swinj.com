@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	text-align: inherit;
+	text-decoration: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+*:focus{
+	outline: none;
+}
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	background-color: #fff;
+	vertical-align: top;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+	font-style: normal;
+	font-family: helvetica, arial, sans-serif;
+	text-align: left;
+	text-decoration: none;
+	color: #ccc;
+	cursor: url(images/cursor.png), pointer;
+}
+
+#imageHolder{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 1500px;
+	height: 900px;
+}
+#imageHolder img{
+	display: block;
+	float: left;
+	margin: 0 25px;
+}
+
+
