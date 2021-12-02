@@ -36,14 +36,17 @@ body {
     border-style: solid;
 }
 #image-1 {
-    transform: rotateY(0deg) translateZ(50vmin);
+    transform: rotateY(0deg) translateZ(100vmin) scaleX(-1);
 }
 #image-2 {
-    transform: rotateY(90deg) translateZ(50vmin);
+    transform: rotateY(72deg) translateZ(100vmin) scaleX(-1);
 }
 #image-3 {
-    transform: rotateY(180deg) translateZ(50vmin);
+    transform: rotateY(144deg) translateZ(100vmin) scaleX(-1);
 }
 #image-4 {
-    transform: rotateY(270deg) translateZ(50vmin);
+    transform: rotateY(216deg) translateZ(100vmin) scaleX(-1);
+}
+#image-5 {
+    transform: rotateY(288deg) translateZ(100vmin) scaleX(-1);
 }
