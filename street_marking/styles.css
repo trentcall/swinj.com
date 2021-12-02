@@ -1,5 +1,46 @@
-img {
-    border-color: rgb(230, 231, 232);
-    border-width: 40px;
-    border-style: solid;
+body {
+    overflow: hidden;
+}
+
+#image_holder {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 75vh;
+    animation-duration: 10s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;
+}
+
+@keyframes rotate {
+    from {
+        transform: perspective(9cm) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(9cm) rotateY(360deg);
+    }
+}
+
+#image_holder img {
+    display: block;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+#image-1 {
+    transform: rotateY(0deg) translateZ(50vmin);
+}
+#image-2 {
+    transform: rotateY(90deg) translateZ(50vmin);
+}
+#image-3 {
+    transform: rotateY(180deg) translateZ(50vmin);
+}
+#image-4 {
+    transform: rotateY(270deg) translateZ(50vmin);
 }
