@@ -37,19 +37,28 @@ body{
 }
 
 #imageHolder{
-	position: absolute;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 1500px;
-	height: 900px;
+	text-align: center;
 }
 #imageHolder img{
-	display: block;
-	float: left;
-	margin: 0 25px;
+	display: inline-block;
+}
+
+@media (min-width: 1200px) {
+	#imageHolder img{
+		margin: 0 25px;
+	}
 }
 
 
+@media (min-width: 1500px) {
+	#imageHolder{
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 1500px;
+		height: 900px;
+	}
+}

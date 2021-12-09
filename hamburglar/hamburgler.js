@@ -19,16 +19,36 @@ var pathList = [
 var actionToRestore = function(event){
 	var image = event.target;
 	image.src = image.stateNormal;
+	if (image.countdownTimer) {
+		clearTimeout(image.countdownTimer);
+	}
 };
 
 var actionToDoWhenClicking = function(event){
+	event.preventDefault();
 	var image = event.target;
 	image.src = image.stateClick;
 };
 
 var actionToDoWhenMousingOver = function(event){
+	event.preventDefault();
 	var image = event.target;
 	image.src = image.stateOver;
+};
+
+var actionToDoWhenTouching = function(event){
+	event.preventDefault();
+	var image = event.target;
+	image.src = image.stateOver;
+	if (image.countdownTimer) {
+		clearTimeout(image.countdownTimer);
+	}
+	image.countdownTimer = setTimeout(
+		function () {
+			image.src = image.stateClick;
+		},
+		1000
+	);
 };
 
 var actionToDoInThePathForEach = function(path){
@@ -42,6 +62,9 @@ var actionToDoInThePathForEach = function(path){
 
 	imageElement.addEventListener('mousedown', actionToDoWhenClicking);
 	imageElement.addEventListener('mouseup', actionToRestore);
+	imageElement.addEventListener('touchstart', actionToDoWhenTouching);
+	imageElement.addEventListener('touchend', actionToRestore);
+	imageElement.addEventListener('touchcancel', actionToRestore);
 
 	imageElement.addEventListener('mouseover', actionToDoWhenMousingOver);
 	imageElement.addEventListener('mouseout', actionToRestore);
