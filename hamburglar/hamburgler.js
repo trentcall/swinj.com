@@ -37,7 +37,6 @@ var actionToDoWhenMousingOver = function(event){
 };
 
 var actionToDoWhenTouching = function(event){
-	event.preventDefault();
 	var image = event.target;
 	image.src = image.stateOver;
 	if (image.countdownTimer) {
