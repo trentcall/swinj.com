@@ -50,6 +50,10 @@ var actionToDoWhenTouching = function(event){
 	);
 };
 
+var preventDefaultEventBehavior = function (event) {
+	event.preventDefault()
+}
+
 var actionToDoInThePathForEach = function(path){
 	var imageElement = new Image();
 	
@@ -59,12 +63,13 @@ var actionToDoInThePathForEach = function(path){
 
 	imageElement.src = imageElement.stateNormal;
 
-	imageElement.addEventListener('mousedown', actionToDoWhenClicking);
-	imageElement.addEventListener('mouseup', actionToRestore);
 	imageElement.addEventListener('touchstart', actionToDoWhenTouching);
 	imageElement.addEventListener('touchend', actionToRestore);
 	imageElement.addEventListener('touchcancel', actionToRestore);
+	imageElement.addEventListener('contextmenu', preventDefaultEventBehavior);
 
+	imageElement.addEventListener('mousedown', actionToDoWhenClicking);
+	imageElement.addEventListener('mouseup', actionToRestore);
 	imageElement.addEventListener('mouseover', actionToDoWhenMousingOver);
 	imageElement.addEventListener('mouseout', actionToRestore);
 
@@ -73,5 +78,7 @@ var actionToDoInThePathForEach = function(path){
 
 pathList.forEach(actionToDoInThePathForEach);
 
-
-
+var isDesktop = !(navigator.userAgent.match(/android|ios/gi))
+if (isDesktop) {
+	document.body.classList.add('notMobile')
+}

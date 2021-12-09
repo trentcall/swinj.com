@@ -33,6 +33,9 @@ body{
 	text-align: left;
 	text-decoration: none;
 	color: #ccc;
+	user-select: none;
+}
+body.notMobile {
 	cursor: url(images/cursor.png), pointer;
 }
 
