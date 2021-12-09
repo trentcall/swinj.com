@@ -1,0 +1,11 @@
+body {
+    overflow: hidden;
+    background-color: aquamarine;
+}
+
+
+h1 {
+    font-size: 60px;
+    color: rgb(219, 15, 255);
+    padding-left: 30px;
+}
