@@ -1,11 +1,38 @@
 body {
     overflow: hidden;
     background-color: aquamarine;
+    background-image: linear-gradient(to right, rgb(212, 248, 54), rgba(26, 219, 190, 0));
+    font-family: "Fira Mono", monospace;
 }
-
 
 h1 {
     font-size: 60px;
     color: rgb(219, 15, 255);
     padding-left: 30px;
+}
+
+.congif {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.content-box {
+    columns: 3 auto;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 220px;
+    width: 100%;
+    background-color: rgb(255, 0, 166);
+    color: white;
+    text-align: left;
+    font-size: 24px;
+    padding-left: 120px;
+    padding-top: 20px;
+
 }
